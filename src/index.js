@@ -1,8 +1,11 @@
+const dotenv=require('dotenv')
 const express=require('express')
 const bodyParser=require('body-parser')
 const path=require('path')
 const flash=require('req-flash')
 const app=express();
+
+dotenv.config();
 
 var porta=process.env.PORT || 3000;
 var session=require('express-session')
