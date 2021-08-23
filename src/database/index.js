@@ -4,7 +4,7 @@ const config=require("../config/database")
 const Categoria=require('../model/Categoria')
 const Questao=require('../model/Questao')
 const Tema=require('../model/Tema')
-const conexao=new Sequelize(process.env.PORT);
+const conexao=new Sequelize(process.env.DATABASE_URL);
 
 //dotenv.config();
 
