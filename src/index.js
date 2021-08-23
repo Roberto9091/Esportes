@@ -6,7 +6,7 @@ const flash=require('req-flash')
 const app=express();
 
 
-var porta=process.env.PORT || 3000;
+var porta=process.env.DATABASE_URL || 3000;
 var session=require('express-session')
 var categoriaRoute=require('./routes/categoriaRoute')
 var questaoRoute=require('./routes/questaoRoute')
