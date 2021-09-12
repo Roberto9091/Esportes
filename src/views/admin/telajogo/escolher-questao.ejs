@@ -1,0 +1,110 @@
+<%- include('../cabecalho2') -%>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <form class="form-horizontal" method="POST"></form>
+                <div class="fundo-jogo">
+                    <img src="/admin/assets/fundojogo2.png" width="1518" height="730" alt="Testando" class="img-fundo-imagem">
+                        <div class="fundo-jogo-2">
+                            <img src="/admin/assets/fundo-jogo-2.png" width="515" height="587" alt="Testando" class="img-fundo-imagem">
+                        <div class="titulo-fundo">
+                            <h1 class="label-titulo">SPEED-TEST</h1>
+                        </div>
+
+                        <div class="categoria-selecionada">
+                            <h4>CATEGORIA SELECIONADA</h4>
+                        </div>
+
+                        <div class="mostra-categoria">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" name="nomecategoria" id="nomecategoria" class="form-control"
+                                        placeholder="Nome da categoria" value="<%=Categorias.nomecategoria%>">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="escolha-tema">
+                            <h4>ESCOLHA UM TEMA</h4>
+                        </div>
+
+                        <div class="select-tema">
+            
+                            <select name="" id="">
+                                <option>Selecione</option>
+                            <% Temas.forEach(function(temas){ %>
+                                <option value="<%=temas.id%>"><%=temas.nometema%></option>
+                                
+                                <%});%>
+                            
+                            </select>
+                            
+                        </div>
+
+                        <div class="escolha-nivel">
+                            <h4>SELECIONE UM NÍVEL</h4>
+                        </div>
+
+                        <div class="select-numero">
+            
+                            <select name="" id="">
+                                
+                                <option value="">Nível 1</option>
+                                <option value="">Nível 2</option>
+                                <option value="">Nível 3</option>
+            
+                            </select>
+                        
+                        </div>
+
+                        <div class="botao-proximo">
+                            <a href="/admin/telajogo/tabuleiro"
+                                class="btn btn-primary m-t-15 waves-effect">Avançar
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="botao-voltar">
+                            <a href="/admin/categoria"
+                                class="btn btn-primary m-t-15 waves-effect">Voltar
+                            </a>
+                        </div>
+
+                        </div>
+                </div>
+                <div>
+                    <div>
+                        <table class="table table-hover">
+                            <tbody>
+                                <%
+                                function numberToReal(numero) {
+                                    var numero = numero.toFixed(2).split('.');
+                                    numero[0] = "R$ " + numero[0].split(/(?=(?:...)*$)/).join('.');
+                                    return numero.join(',');
+                                }
+                                %>
+                                <form class="form-horizontal" method="POST">
+                                    
+                                </form>
+                                
+                            </tbody>
+                        </table>
+                        <form class="form-horizontal" method="POST">
+                            <% if(typeof msg !== "undefined"){ %>
+                            <div class="alert bg-green alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <%=msg%>
+                            </div>
+                            <% } %>
+                            
+                        </form>
+                    </div>
+                </div>
+            
+        </div>
+        <!-- #END# Horizontal Layout -->
+    </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/boodstrap@5.0.2/dist/js/boodstrap.bundle.min.js"></script>
+<%- include('../rodape') -%>

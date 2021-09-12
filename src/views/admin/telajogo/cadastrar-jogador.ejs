@@ -1,0 +1,107 @@
+<%- include('../cabecalho2') -%>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <form class="form-horizontal" method="POST"></form>
+                <div class="fundo-jogo">
+                    <img src="/admin/assets/fundojogo2.png" width="1518" height="730" alt="Testando" class="img-fundo-imagem">
+                        <div class="fundo-jogo-2">
+                            <img src="/admin/assets/fundo-jogo-2.png" width="515" height="587" alt="Testando" class="img-fundo-imagem">
+                        <div class="titulo-fundo">
+                            <h1 class="label-titulo">SPEED-TEST</h1>
+                        </div>
+                            <div class="texto-nome">
+                                <h4>NOME DO JOGADOR</h4>
+                            </div>
+
+                            <div class="digite-nome">
+                                <input type="text" name="nomejogador" id="nomejogador" class="form-control123"
+                                placeholder="Digite seu nome:" >
+                            </div>
+
+                            <div class="escolha-categoria">
+                                <h4>ESCOLHA UMA CATEGORIA</h4>
+                            </div>
+
+                            <div class="select-categoria">
+                                <select name="idCategoria" id="idCategoria">
+                                    <option>Selecione</option>
+                                <% Categorias.forEach(function(categorias){ %>
+
+                                    <option value="<%=categorias.id%>"><%=categorias.nomecategoria%></option>
+
+                                    <%});%>
+                                </select>
+                            </div>
+
+                            <div class="escolha-numero">
+                                <h4>NÚMERO DE JOGADORES?</h4>
+                            </div>
+                            <div class="select-numero">
+            
+                                <select name="numerodejogador" id="numerodejogador">
+                                    <option value="2">2 Jogadores</option>
+                                    <option value="3">3 Jogadores</option>
+                                    <option value="4">4 Jogadores</option>
+                                    <option value="5">5 Jogadores</option>
+                                    <option value="6">6 Jogadores</option>
+                                    <option value="7">7 Jogadores</option>
+                                    <option value="8">8 Jogadores</option>
+                                </select>
+                            
+                            </div>
+
+                            <% Categorias.forEach(function(categorias){ %>
+                                <div class="botao-proximo">
+                                    <a href="/admin/telajogo/escolher-questao/<%=categorias.id%>"
+                                        class="btn btn-primary m-t-15 waves-effect">Avançar
+                                    </a>
+                                </div>
+                            <%});%>
+                        
+                            <% Categorias.forEach(function(categorias){ %>
+                                <div class="botao-voltar">
+                                    <a href="/admin/categoria"
+                                        class="btn btn-primary m-t-15 waves-effect">Voltar
+                                    </a>
+                                </div>
+                            <%});%>
+
+                    </div>
+                </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div>
+                    <div>
+                        <table class="table table-hover">
+                            <tbody>
+                                <%
+                                function numberToReal(numero) {
+                                    var numero = numero.toFixed(2).split('.');
+                                    numero[0] = "R$ " + numero[0].split(/(?=(?:...)*$)/).join('.');
+                                    return numero.join(',');
+                                }
+                                %>
+                                
+                            </tbody>
+                        </table>
+                        
+
+                        <form class="form-horizontal" method="POST">
+                            <% if(typeof msg !== "undefined"){ %>
+                            <div class="alert bg-green alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <%=msg%>
+                            </div>
+                            <% } %>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Horizontal Layout -->
+    </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/boodstrap@5.0.2/dist/js/boodstrap.bundle.min.js"></script>
+<%- include('../rodape') -%>
