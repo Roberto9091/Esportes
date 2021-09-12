@@ -103,7 +103,7 @@ select.selectpicker {
   display: inline-block;
   overflow: hidden;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 .bootstrap-select.btn-group .dropdown-toggle .caret {
   position: absolute;

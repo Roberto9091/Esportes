@@ -1,1 +1,1 @@
-web:node src/database/index.js
+web:node src/index.js

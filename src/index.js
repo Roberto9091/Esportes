@@ -11,6 +11,7 @@ var session=require('express-session')
 var categoriaRoute=require('./routes/categoriaRoute')
 var questaoRoute=require('./routes/questaoRoute')
 var temaRoute=require('./routes/temaRoute')
+var telajogoRoute=require('./routes/telajogoRoute')
 
 require('./database/index')
 
@@ -22,7 +23,7 @@ app.use(express.static(path.join("src","public")))
 app.use('/admin/categoria',categoriaRoute)
 app.use('/admin/questao',questaoRoute)
 app.use('/admin/tema',temaRoute)
-//app.use('/admin/quadra',quadraRoute)
+app.use('/admin/telajogo',telajogoRoute)
 //app.use('/caixa',caixaRoute)
 
 app.set('view engine', 'ejs')

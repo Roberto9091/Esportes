@@ -35,6 +35,7 @@ module.exports={
     },
     async abreedit(req,res){
         const id = req.params.id;
+        console.log(id, id)
         const categorias=await Categoria.findOne( {where: {id}})
         res.render('admin/categoria/edit.ejs',{'Categorias':categorias,'msg':req.flash('msg')})
     },

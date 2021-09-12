@@ -13,7 +13,7 @@ class Questao extends Model {
         },{sequelize,tableName:'questoes'})
     };
     static associate(models){
-        //this.belongsTo(models.Categoria,{foreignKey:'idQCategoria', as:'categoria'})
+        this.belongsTo(models.Categoria,{foreignKey:'idQTema', as:'categoria'})
         this.belongsTo(models.Tema,{foreignKey:'idQTema', as:'tema'})
 
         return Questao;

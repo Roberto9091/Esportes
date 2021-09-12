@@ -77,6 +77,7 @@ module.exports={
         const temas = await Tema.findOne(
             {where: {id} }
         );
+        
 
         temas.destroy();
         return res.render('admin/tema/list.ejs',{'Temas':temas,'msg':req.flash('msg')})

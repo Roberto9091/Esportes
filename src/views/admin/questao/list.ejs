@@ -54,15 +54,16 @@
                                     <td><%=questoes.tema.categoria.nomecategoria%></td>
                                     <td><%=questoes.tema.nometema%></td>
                                     <td><%=questoes.enunciado%></td>
-                                    <td><%=questoes.opcao1%></td>
-                                    <td><%=questoes.opcao2%>
+                                    <td><%=questoes.opcao1%>
+                                        <div></div> 
+                                        <%=questoes.opcao2%>
                                         <div></div>   
                                         <%=questoes.opcao3%>
                                         <div></div>    
                                         <%=questoes.opcao4%>
                                         <div></div>     
-                                        <%=questoes.nivel%>
-                                        <div></div>  
+                                    <td><%=questoes.nivel%></td>
+                                         
                                     </td>
                                     <td>
                                         <a href="/admin/questao/edit/<%=questoes.id%>"

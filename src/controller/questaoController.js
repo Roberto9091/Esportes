@@ -1,14 +1,12 @@
 const Questoes=require('../model/Questao')
 const Categoria=require('../model/Categoria')
 const Tema=require('../model/Tema')
-const {Op}=require('sequelize')
+const {Op, Association}=require('sequelize')
 
 module.exports={
     async list(req,res){
         const questoes=await Questoes.findAll(
             { 
-                //include: {association: 'categoria' },
-                //include: {association: 'tema'},
                 include: [
                     {
                         model: Tema,
@@ -20,6 +18,7 @@ module.exports={
                     }
                 ]
             }
+            
         )
         return res.render('admin/questao/list.ejs',{'Questoes':questoes,'msg':req.flash('msg')})
     },
@@ -70,19 +69,46 @@ module.exports={
     async abreedit(req,res){
         const id = req.params.id;
         const questoes=await Questoes.findOne({where: {id}})
-        const temas=await Tema.findAll()
+        const temas=await Tema.findAll( { 
+            order:[['idCategoria']],
+            include: {association: 'categoria'} 
+        });
         const categorias=await Categoria.findAll()
+        
         res.render('admin/questao/edit.ejs',{'Questoes':questoes,'Categorias':categorias,'Temas':temas, 'msg':req.flash('msg')})
     },
     async edit(req,res){
         const id = req.params.id;
-        const {enunciado, opcao1, opcao2, opcao3, opcao4, nivel} = req.body;
+        const enunciado = req.body.enunciado;
+        const opcao1 = req.body.opcao1;
+        const opcao2 = req.body.opcao2;
+        const opcao3 = req.body.opcao3;
+        const opcao4 = req.body.opcao4;
+        const nivel = req.body.nivel;
 
-        const questoes = await Questoes.findByPk(id, enunciado, opcao1, opcao2, opcao3, opcao4, nivel);
-
-        questoes.save();
-
-        return res.render('admin/questao/add.ejs',{'Questoes':questoes,'msg':req.flash('msg')})
+        
+        console.log(enunciado)
+        await Questoes.update({enunciado,opcao1,opcao2,opcao3,opcao4,nivel},{ where: {id:id}});
+        
+        req.flash('msg', 'Questão editada com sucesso!')
+        const temas=await Tema.findAll()
+        const questoes = await Questoes.findAll(
+            { 
+                //include: {association: 'categoria' },
+                //include: {association: 'tema'},
+                include: [
+                    {
+                        model: Tema,
+                        as: 'tema',
+                        include: [
+                            { model: Categoria, 
+                            as: 'categoria' },
+                        ]
+                    }
+                ]
+            }
+        )
+        return res.render('admin/questao/list.ejs',{'Questoes':questoes,'Temas':temas, 'msg':req.flash('msg')})
     },
     async del(req,res){
         const id = req.params.id;

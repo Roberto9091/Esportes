@@ -107,6 +107,286 @@
 
 .navbar-nav .dropdown-menu {
   margin-top: -40px !important; }
+.fundo-jogo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.fundo-jogo-2 {
+  position: absolute;
+  left: 495px;
+  top: 80px;
+}
+.titulo-fundo {
+  position: absolute;
+  left: 145px;
+  top: -75px;
+}
+.label-titulo {
+  font-family: 'Bubblegum Sans', Summit;
+  width:330px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  
+}
+  .img-botao{
+    left: 600px;
+    color: white;
+  }
+  .imagem-fundo-tabuleiro{
+    position: absolute; 
+    left: 0px;
+    top: 0px;
+  }
+
+  .categoria-selecionada{
+    position: absolute; 
+    left: 150px;
+    top: 30px;
+  }
+  .texto-nome{
+    position: absolute; 
+    left: 170px;
+    top: 30px;
+  }
+  .escolha-tema{
+    position: absolute; 
+    left: 175px;
+    top: 140px;
+  }
+  .escolha-numero{
+    position: absolute; 
+    left: 145px;
+    top: 255px;
+  }
+  .escolha-nivel{
+    position: absolute; 
+    left: 165px;
+    top: 255px;
+  }
+  .escolha-categoria{
+    position: absolute; 
+    left: 140px;
+    top: 140px;
+  }
+  .mostra-categoria{
+    position: absolute; 
+    left: 175px;
+    top: 75px;
+  }
+  .botao-proximo{
+    position: absolute; 
+    left: 290px;
+    top: 400px;
+  }
+  .botao-voltar{
+    position: absolute; 
+    left: 150px;
+    top: 400px;
+  }
+  .digite-nome{
+    position: absolute; 
+    left: 155px;
+    top: 75px;
+    width: 130%;
+  }
+  .select-categoria{
+    position: absolute; 
+    left: 145px;
+    top: 195px;
+    width: 50%;
+  }
+  .select-tema{
+    position: absolute; 
+    left: 145px;
+    top: 195px;
+    width: 50%;
+  }
+  
+  .select-numero{
+    position: absolute; 
+    left: 145px;
+    top: 315px;
+    width: 50%;
+  }
+  .select-nivel{
+    position: absolute; 
+    left: 145px;
+    top: 315px;
+    width: 50%;
+  }
+  .imagem-fundo {
+    position: absolute; 
+    left: 290px;
+    top: 270px;
+  }
+  .tela-fundo {
+    position: absolute; 
+    left: 0px;
+    top: 0px;
+  }
+  .botao-play {
+    position: absolute; 
+    left: 519px;
+    top: 25px;
+  }
+  .botao-jogar {
+    position: absolute; 
+    left: 780px;
+    top: 250px;
+  }
+  .texto-jogar {
+    position: absolute; 
+    left: 780px;
+    top: 250px;
+    size: 20px;
+  }
+  .img-numero1-linha1 {
+    position: absolute; 
+    left: 350px;
+    top: 470px;
+  }
+  .img-numero2-linha1 {
+    position: absolute; 
+    left: 350px;
+    top: 390px;
+  }
+  .img-numero3-linha1 {
+    position: absolute; 
+    left: 350px;
+    top: 310px;
+  }
+  .img-numero4-linha1 {
+    position: absolute; 
+    left: 350px;
+    top: 230px;
+  }
+  .img-numero5-linha1 {
+    position: absolute; 
+    left: 350px;
+    top: 150px;
+  }
+  .nomejogador1 {
+    position: absolute; 
+    left: 330px;
+    top: 560px;
+    color: "#ffffff";
+    }
+  .nomejogador1a {
+    position: absolute; 
+    left: 330px;
+    top: 560px;
+  }
+  .nomejogador2 {
+    position: absolute; 
+    left: 530px;
+    top: 560px;
+  }
+  .nomejogador3 {
+    position: absolute; 
+    left: 730px;
+    top: 560px;
+  }
+  .nomejogador4 {
+    position: absolute; 
+    left: 930px;
+    top: 560px;
+  }
+  .img-numero1-linha2 {
+    position: absolute; 
+    left: 550px;
+    top: 470px;
+  }
+  .img-numero2-linha2 {
+    position: absolute; 
+    left: 550px;
+    top: 390px;
+  }
+  .img-numero3-linha2 {
+    position: absolute; 
+    left: 550px;
+    top: 310px;
+  }
+  .img-numero4-linha2 {
+    position: absolute; 
+    left: 550px;
+    top: 230px;
+  }
+  .img-numero5-linha2 {
+    position: absolute; 
+    left: 550px;
+    top: 150px;
+  }
+  .img-numero1-linha3 {
+    position: absolute; 
+    left: 750px;
+    top: 470px;
+  }
+  .img-numero2-linha3 {
+    position: absolute; 
+    left: 750px;
+    top: 390px;
+  }
+  .img-numero3-linha3 {
+    position: absolute; 
+    left: 750px;
+    top: 310px;
+  }
+  .img-numero4-linha3 {
+    position: absolute; 
+    left: 750px;
+    top: 230px;
+  }
+  .img-numero5-linha3 {
+    position: absolute; 
+    left: 750px;
+    top: 150px;
+  }
+  .img-numero1-linha4 {
+    position: absolute; 
+    left: 950px;
+    top: 470px;
+  }
+  .img-numero2-linha4 {
+    position: absolute; 
+    left: 950px;
+    top: 390px;
+  }
+  .img-numero3-linha4 {
+    position: absolute; 
+    left: 950px;
+    top: 310px;
+  }
+  .img-numero4-linha4 {
+    position: absolute; 
+    left: 950px;
+    top: 230px;
+  }
+  .img-numero5-linha4 {
+    position: absolute; 
+    left: 950px;
+    top: 150px;
+  }
+  .img-botaojogador1 {
+    position: absolute; 
+    left: 347px;
+    top: 590px;
+  }
+  .img-botaojogador2 {
+    position: absolute; 
+    left: 547px;
+    top: 590px;
+  }
+  .img-botaojogador3 {
+    position: absolute; 
+    left: 747px;
+    top: 590px;
+  }
+  .img-botaojogador4 {
+    position: absolute; 
+    left: 947px;
+    top: 590px;
+  }
 
 .label-count {
   position: absolute;
@@ -2363,7 +2643,7 @@
 
 /* General ===================================== */
 body {
-  background-color: #bfc9c9;
+  
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   -webkit-transition: all 0.5s;
