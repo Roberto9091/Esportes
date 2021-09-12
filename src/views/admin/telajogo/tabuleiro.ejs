@@ -20,12 +20,14 @@
         
 
         <link rel="stylesheet" href="admin/css/style.css">
-          
+        <% Questoes.forEach(function(questoes){ %>
         <div class="botao-proximo">
-            <a href="/admin/telajogo/tabuleiro/:questao"
-                class="btn btn-primary m-t-15 waves-effect">Avançar
+            <a href="/admin/telajogo/questao/<%=questoes.questao%>"
+                class="btn btn-warning btn-circle-lg waves-effect waves-circle waves-float">
+                <i class="material-icons">edit</i>
             </a>
         </div>
+        <%});%>
 
         
         

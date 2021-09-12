@@ -7,9 +7,9 @@ routes.get('/tabuleiro',telajogoController.abretabuleiro)
 
 routes.post('/tabuleiro',telajogoController.tabuleiro)
 
-routes.get('/questao',telajogoController.abrequestao)
+routes.get('/questao/:questao',telajogoController.abrequestao)
 
-routes.post('/questao',telajogoController.questao)
+routes.post('/questao/:questao',telajogoController.questao)
 
 routes.post('/',telajogoController.filtro)
 
