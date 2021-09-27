@@ -7,7 +7,24 @@ select * from table order by random() limit 1000;
 
 
 
+const questoes=await Questao.findOne(
+    { 
+        
+        order: Sequelize.literal('rand()'),
+        limit: 1,
+        include: [
+            {
+                model: Tema,
+                as: 'tema',
+                include: [
+                    { model: Categoria, 
+                    as: 'categoria' },
+                ]
+            }
+        ]
+    }
 
+)
 
 
 <div class="img-numero1-linha2">

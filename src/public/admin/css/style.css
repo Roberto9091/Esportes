@@ -235,6 +235,17 @@
     left: 780px;
     top: 250px;
   }
+  .botao-jogar2 {
+    position: absolute; 
+    left: 530px;
+    top: 50px;
+  }
+  .nome-teste {
+    position: absolute; 
+    left: 530px;
+    top: 50px;
+    color:rgb(255, 255, 255);
+  }
   .texto-jogar {
     position: absolute; 
     left: 780px;
@@ -243,148 +254,283 @@
   }
   .img-numero1-linha1 {
     position: absolute; 
-    left: 350px;
+    left:150px;
     top: 470px;
   }
   .img-numero2-linha1 {
     position: absolute; 
-    left: 350px;
+    left: 150px;
     top: 390px;
   }
   .img-numero3-linha1 {
     position: absolute; 
-    left: 350px;
+    left: 150px;
     top: 310px;
   }
   .img-numero4-linha1 {
     position: absolute; 
-    left: 350px;
+    left: 150px;
     top: 230px;
   }
   .img-numero5-linha1 {
     position: absolute; 
-    left: 350px;
+    left: 150px;
     top: 150px;
   }
   .nomejogador1 {
     position: absolute; 
-    left: 330px;
+    left: 158px;
     top: 560px;
-    color: "#ffffff";
+    color: rgb(255, 255, 255);
     }
-  .nomejogador1a {
-    position: absolute; 
-    left: 330px;
-    top: 560px;
-  }
   .nomejogador2 {
     position: absolute; 
-    left: 530px;
+    left: 1230px;
     top: 560px;
+    color: rgb(255, 255, 255);
   }
   .nomejogador3 {
     position: absolute; 
-    left: 730px;
+    left: 1310px;
     top: 560px;
+    color: rgb(255, 255, 255);
   }
   .nomejogador4 {
     position: absolute; 
-    left: 930px;
+    left: 1390px;
     top: 560px;
+    color: rgb(255, 255, 255);
   }
+  .nome-categoria {
+    position: absolute; 
+    left: 35px;
+    top: 0px;
+    color: rgb(255, 255, 255);
+  }
+  .nome-categoria-sql {
+    position: absolute; 
+    left: 165px;
+    top: 25px;
+    color: rgb(255, 255, 255);
+  }
+  .nome-tema {
+    position: absolute; 
+    left: 35px;
+    top: 50px;
+    color: rgb(255, 255, 255);
+  }
+  .nome-tema-sql {
+    position: absolute; 
+    left: 118px;
+    top: 75px;
+    color: rgb(255, 255, 255);
+  }
+  .nome-enunciado {
+    position: absolute; 
+    left: 500px;
+    top: 170px;
+    color: rgb(255, 255, 255);
+  }
+  .nome-opcao1 {
+    position: absolute; 
+    left: 575px;
+    top: 302px;
+    color: rgb(0, 0, 0);
+  }
+  .tempo {
+    position: absolute; 
+    left: 1280px;
+    top: 10px;
+    color: rgb(24, 24, 24);
+  }
+  .img-teste2 {
+    position: absolute; 
+    left: 1250px;
+    top: 10px;
+  }
+  .responder {
+    position: absolute; 
+    left: 675px;
+    top: 638px;
+    color: rgb(24, 24, 24);
+  }
+  .img-teste3 {
+    position: absolute; 
+    left: 680px;
+    top: 625px;
+  }
+  .img-teste4 {
+    position: absolute; 
+    left: 800px;
+    top: 625px;
+  }
+  .img-teste {
+    position: absolute; 
+    left: 1150px;
+    top: 300px;
+  }
+  .img-enunciado {
+    position: absolute; 
+    left: 450px;
+    top: 100px;
+  }
+  .img-opcao1 {
+    position: absolute; 
+    left: 480px;
+    top: 270px;
+  }
+  .nome-opcao1 {
+    position: absolute; 
+    left: 575px;
+    top: 302px;
+    color: rgb(0, 0, 0);
+  }
+  .img-letra-a {
+    position: absolute; 
+    left: 505px;
+    top: 288px;
+  }
+  .img-opcao2 {
+    position: absolute; 
+    left: 480px;
+    top: 352px;
+  }
+  .nome-opcao2 {
+    position: absolute; 
+    left: 575px;
+    top: 384px;
+    color: rgb(0, 0, 0);
+  }
+  .img-letra-b {
+    position: absolute; 
+    left: 505px;
+    top: 370px;
+  }
+  .img-opcao3 {
+    position: absolute; 
+    left: 480px;
+    top: 432px;
+  }
+  .nome-opcao3 {
+    position: absolute; 
+    left: 575px;
+    top: 464px;
+    color: rgb(0, 0, 0);
+  }
+  .img-letra-c {
+    position: absolute; 
+    left: 505px;
+    top: 450px;
+  }
+  .img-opcao4 {
+    position: absolute; 
+    left: 480px;
+    top: 515px;
+  }
+  .nome-opcao4 {
+    position: absolute; 
+    left: 575px;
+    top: 547px;
+    color: rgb(0, 0, 0);
+  }
+  .img-letra-d {
+    position: absolute; 
+    left: 505px;
+    top: 533px;
+  }  
   .img-numero1-linha2 {
     position: absolute; 
-    left: 550px;
-    top: 470px;
+    left: 1240px;
+    top: 510px;
   }
   .img-numero2-linha2 {
     position: absolute; 
-    left: 550px;
-    top: 390px;
+    left: 1240px;
+    top: 470px;
   }
   .img-numero3-linha2 {
     position: absolute; 
-    left: 550px;
-    top: 310px;
+    left: 1240px;
+    top: 430px;
   }
   .img-numero4-linha2 {
     position: absolute; 
-    left: 550px;
-    top: 230px;
+    left: 1240px;
+    top: 390px;
   }
   .img-numero5-linha2 {
     position: absolute; 
-    left: 550px;
-    top: 150px;
+    left: 1240px;
+    top: 350px;
   }
   .img-numero1-linha3 {
     position: absolute; 
-    left: 750px;
-    top: 470px;
+    left: 1320px;
+    top: 510px;
   }
   .img-numero2-linha3 {
     position: absolute; 
-    left: 750px;
-    top: 390px;
+    left: 1320px;
+    top: 470px;
   }
   .img-numero3-linha3 {
     position: absolute; 
-    left: 750px;
-    top: 310px;
+    left: 1320px;
+    top: 430px;
   }
   .img-numero4-linha3 {
     position: absolute; 
-    left: 750px;
-    top: 230px;
+    left: 1320px;
+    top: 390px;
   }
   .img-numero5-linha3 {
     position: absolute; 
-    left: 750px;
-    top: 150px;
+    left: 1320px;
+    top: 350px;
   }
   .img-numero1-linha4 {
     position: absolute; 
-    left: 950px;
-    top: 470px;
+    left: 1400px;
+    top: 510px;
   }
   .img-numero2-linha4 {
     position: absolute; 
-    left: 950px;
-    top: 390px;
+    left: 1400px;
+    top: 470px;
   }
   .img-numero3-linha4 {
     position: absolute; 
-    left: 950px;
-    top: 310px;
+    left: 1400px;
+    top: 430px;
   }
   .img-numero4-linha4 {
     position: absolute; 
-    left: 950px;
-    top: 230px;
+    left: 1400px;
+    top: 390px;
   }
   .img-numero5-linha4 {
     position: absolute; 
-    left: 950px;
-    top: 150px;
+    left: 1400px;
+    top: 350px;
   }
   .img-botaojogador1 {
     position: absolute; 
-    left: 347px;
+    left: 147px;
     top: 590px;
   }
   .img-botaojogador2 {
     position: absolute; 
-    left: 547px;
+    left: 1240px;
     top: 590px;
   }
   .img-botaojogador3 {
     position: absolute; 
-    left: 747px;
+    left: 1320px;
     top: 590px;
   }
   .img-botaojogador4 {
     position: absolute; 
-    left: 947px;
+    left: 1400px;
     top: 590px;
   }
 

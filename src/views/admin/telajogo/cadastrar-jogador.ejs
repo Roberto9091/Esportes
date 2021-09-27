@@ -2,7 +2,7 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row clearfix">
-            <form class="form-horizontal" method="POST"></form>
+            <form class="form-horizontal" method="POST">
                 <div class="fundo-jogo">
                     <img src="/admin/assets/fundojogo2.png" width="1518" height="730" alt="Testando" class="img-fundo-imagem">
                         <div class="fundo-jogo-2">
@@ -19,45 +19,62 @@
                                 placeholder="Digite seu nome:" >
                             </div>
 
-                            <div class="escolha-categoria">
-                                <h4>ESCOLHA UMA CATEGORIA</h4>
+                            <div class="escolha-tema">
+                                <h4>ESCOLHA UM TEMA</h4>
                             </div>
-
+                            
                             <div class="select-categoria">
-                                <select name="idCategoria" id="idCategoria">
+                                <select name="idQTema" id="idQTema">
                                     <option>Selecione</option>
-                                <% Categorias.forEach(function(categorias){ %>
-
-                                    <option value="<%=categorias.id%>"><%=categorias.nomecategoria%></option>
-
-                                    <%});%>
-                                </select>
+                                        <%
+                                        var primeiro = 1; 
+                                        var anterior = -1;
+                                        Temas.forEach(function(tema){ %>                                
+                                                                
+                                                                <% if(tema.idCategoria != anterior || primeiro == 1 ){
+                                                                    anterior = tema.idCategoria;
+                                                                    primeiro = 0;    
+                                                                %>
+                                                                    <optgroup name="nometema" id="nometema" label="<%=tema.categoria.nomecategoria%>">
+                                                                <% } %>
+                                                                
+                                                                    <option value="<%=tema.id%>"><%=tema.nometema%></option>
+                                                                
+                                                                <% if(tema.idCategoria != anterior || primeiro == 1 ){
+                                                                    anterior = tema.idCategoria;
+                                                                    primeiro = 0;    
+                                                                %>
+                                                                </optgroup>
+                                                                <% } %>
+                                
+                                                                <%});%>
+                                                            
+                                                            </select>
                             </div>
 
-                            <div class="escolha-numero">
-                                <h4>NÚMERO DE JOGADORES?</h4>
+                            <div class="escolha-nivel">
+                                <h4>SELECIONE UM NÍVEL</h4>
                             </div>
+    
                             <div class="select-numero">
-            
-                                <select name="numerodejogador" id="numerodejogador">
-                                    <option value="2">2 Jogadores</option>
-                                    <option value="3">3 Jogadores</option>
-                                    <option value="4">4 Jogadores</option>
-                                    <option value="5">5 Jogadores</option>
-                                    <option value="6">6 Jogadores</option>
-                                    <option value="7">7 Jogadores</option>
-                                    <option value="8">8 Jogadores</option>
+                
+                                <select name="" id="">
+                                    
+                                    <option value="">Nível 1</option>
+                                    <option value="">Nível 2</option>
+                                    <option value="">Nível 3</option>
+                
                                 </select>
                             
                             </div>
 
-                            <% Categorias.forEach(function(categorias){ %>
+                        <form class="form-horizontal" method="POST">   
+                            <div class="row clearfix">
                                 <div class="botao-proximo">
-                                    <a href="/admin/telajogo/escolher-questao/<%=categorias.id%>"
-                                        class="btn btn-primary m-t-15 waves-effect">Avançar
-                                    </a>
+                                    <button type="submit" class="btn btn-primary m-t-15 waves-effect">Próximo</button>
                                 </div>
-                            <%});%>
+                            </div>
+                        </form> 
                         
                             <% Categorias.forEach(function(categorias){ %>
                                 <div class="botao-voltar">
@@ -66,8 +83,8 @@
                                     </a>
                                 </div>
                             <%});%>
-
-                    </div>
+                        </div>
+                    </form>
                 </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div>
