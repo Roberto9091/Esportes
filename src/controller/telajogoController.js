@@ -96,6 +96,33 @@ module.exports={
             }
         )
 
+        res.render('admin/telajogo/questao2.ejs',{'Questoes':questoes,'msg':req.flash('msg')})
+    },
+    async abrequestao2(req,res){
+        const id = req.params.id;
+
+        const categorias=await Categoria.findAll()
+        const temas=await Tema.findOne({where:{id:id}})
+        const questoes=await Questao.findOne()
+
+        res.render('admin/telajogo/tabuleiro.ejs',{'Categorias':categorias,'Temas':temas,'Questoes':questoes,'msg':req.flash('msg')})
+    },
+    async questao2(req,res){
+        const questoes = await Questao.findOne(
+            { 
+                include: [
+                    {
+                        model: Tema,
+                        as: 'tema',
+                        include: [
+                            { model: Categoria, 
+                            as: 'categoria' },
+                        ]
+                    }
+                ]
+            }
+        )
+
         res.render('admin/telajogo/tabuleiro.ejs',{'Questoes':questoes,'msg':req.flash('msg')})
     },
 }

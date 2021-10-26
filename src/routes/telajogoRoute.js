@@ -12,5 +12,9 @@ routes.get('/tabuleiro',telajogoController.abretabuleiro)
 
 routes.post('/tabuleiro',telajogoController.tabuleiro)
 
+routes.get('/questao2',telajogoController.abrequestao2)
+
+routes.post('/questao2',telajogoController.questao2)
+
 
 module.exports = routes

@@ -4,6 +4,67 @@ select * from table order by random() limit 1000;
 
 
 
+if(contador == 1 && (aleatorio == 1 || aleatorio == 2  || aleatorio == 3  || aleatorio == 4)){
+    document.getElementById("opcao1").src="/admin/assets/imagem-opcao-certa.png";
+    document.getElementById("opcao2").src="/admin/assets/imagem-opcao-errada.png";
+    document.getElementById("opcao3").src="/admin/assets/imagem-opcao-errada.png";
+    document.getElementById("opcao4").src="/admin/assets/imagem-opcao-errada.png";
+
+    } else if(contador == 2){
+    document.getElementById("opcao2").src="/admin/assets/imagem-opcao-errada.png";
+        
+    } else if(contador == 3){
+    document.getElementById("opcao3").src="/admin/assets/imagem-opcao-errada.png";
+        
+    }
+    else if(contador == 4){
+    document.getElementById("opcao4").src="/admin/assets/imagem-opcao-errada.png";
+        
+    }
+else 
+{
+//avisa que errou e vai pra próxima
+}
+
+<form class="form-horizontal" method="POST">   
+            <div class="row clearfix">
+                <div class="img-avancar">
+                    <button type="submit" class="btn btn-primary m-t-15 waves-effect">RESPONDER</button>
+                </div>
+            </div>
+        </form> 
+
+
+
+
+if(contador == 1){
+    if(aleatorio == 1 || aleatorio == 2  || aleatorio == 3  || aleatorio == 4){
+                    document.getElementById("opcao1").src="/admin/assets/imagem-opcao-certa.png";
+}
+else{
+ document.getElementById("opcao1").src="/admin/assets/imagem-opcao-errada.png";
+}
+                    } else if(contador == 2){
+                    document.getElementById("opcao2").src="/admin/assets/imagem-opcao-errada.png";
+                        
+                    } else if(contador == 3){
+                    document.getElementById("opcao3").src="/admin/assets/imagem-opcao-errada.png";
+                        
+                    }
+                    else if(contador == 4){
+                    document.getElementById("opcao4").src="/admin/assets/imagem-opcao-errada.png";
+                        
+                    }
+       else 
+        {
+        //avisa que errou e vai pra próxima
+}
+
+
+
+
+
+
 
 
 

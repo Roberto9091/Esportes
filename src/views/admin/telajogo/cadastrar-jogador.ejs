@@ -10,18 +10,14 @@
                         <div class="titulo-fundo">
                             <h1 class="label-titulo">SPEED-TEST</h1>
                         </div>
-                            <div class="texto-nome">
-                                <h4>NOME DO JOGADOR</h4>
-                            </div>
+                            
 
                             <div class="digite-nome">
                                 <input type="text" name="nomejogador" id="nomejogador" class="form-control123"
                                 placeholder="Digite seu nome:" >
                             </div>
 
-                            <div class="escolha-tema">
-                                <h4>ESCOLHA UM TEMA</h4>
-                            </div>
+                            
                             
                             <div class="select-categoria">
                                 <select name="idQTema" id="idQTema">
@@ -52,9 +48,7 @@
                                                             </select>
                             </div>
 
-                            <div class="escolha-nivel">
-                                <h4>SELECIONE UM NÍVEL</h4>
-                            </div>
+                            
     
                             <div class="select-numero">
                 
@@ -77,10 +71,10 @@
                         </form> 
                         
                             <% Categorias.forEach(function(categorias){ %>
-                                <div class="botao-voltar">
-                                    <a href="/admin/categoria"
-                                        class="btn btn-primary m-t-15 waves-effect">Voltar
-                                    </a>
+                                <div class="row clearfix">
+                                    <div class="botao-voltar">
+                                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Voltar</button>
+                                    </div>
                                 </div>
                             <%});%>
                         </div>
