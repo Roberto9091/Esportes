@@ -5,6 +5,10 @@ const {Op, Association}=require('sequelize')
 const Sequelize = require('sequelize')
 
 module.exports={
+    async abretelainicial(req,res){
+    },
+    async telainicial(req,res){
+    },
     async proxima(req,res){
         const {idQTema}=req.body;
         const id = parseInt(idQTema);    
@@ -46,6 +50,9 @@ module.exports={
     async cadastrarjogador(req,res){
         const {idQTema, nometema}=req.body;
         const id = parseInt(idQTema);    
+        const questaoNumero = req.params.questaoNumero;
+
+        console.log(questaoNumero);
         
         const questoes = await Questao.findAll(
             { 
@@ -73,12 +80,13 @@ module.exports={
     },
     async abretabuleiro(req,res){
         const id = req.params.id;
+        const questaoNumero = req.params.questaoNumero;
 
         const categorias=await Categoria.findAll()
         const temas=await Tema.findOne({where:{id:id}})
         const questoes=await Questao.findOne()
 
-        res.render('admin/telajogo/tabuleiro.ejs',{'Categorias':categorias,'Temas':temas,'Questoes':questoes,'msg':req.flash('msg')})
+        res.render('admin/telajogo/tabuleiro.ejs',{'Categorias':categorias,'Temas':temas,'Questoes':questoes,'questaoNumero':questaoNumero,'msg':req.flash('msg')})
     },
     async tabuleiro(req,res){
         const questoes = await Questao.findOne(

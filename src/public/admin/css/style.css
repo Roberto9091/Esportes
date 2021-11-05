@@ -254,61 +254,61 @@
   }
   .img-numero1-linha1 {
     position: absolute; 
-    left: 125px;
-    top: 470px;
+    left: 112px;
+    top: 423px;
   }
   .img-numero2-linha1 {
     position: absolute; 
-    left: 125px;
-    top: 390px;
+    left: 112px;
+    top: 351px;
   }
   .img-numero3-linha1 {
     position: absolute; 
-    left: 125px;
-    top: 310px;
+    left: 112px;
+    top: 279px;
   }
   .img-numero4-linha1 {
     position: absolute; 
-    left: 125px;
-    top: 230px;
+    left: 112px;
+    top: 207px;
   }
   .img-numero5-linha1 {
     position: absolute; 
-    left: 125px;
-    top: 150px;
+    left: 112px;
+    top: 135px;
   }
   .img-botaojogador1 {
     position: absolute; 
-    left: 123px;
-    top: 152px;
+    left: 110px;
+    top: 140px;
   }
   .nomejogador1 {
     position: absolute; 
-    left: 133px;
-    top: 560px;
+    left: 119px;
+    top: 504px;
     color: rgb(255, 255, 255);
     }
   .nomejogador2 {
     position: absolute; 
-    left: 1255px;
-    top: 610px;
+    left: 1129px;
+    top: 549px;
     color: rgb(255, 255, 255);
   }
   .nomejogador3 {
     position: absolute; 
-    left: 1335px;
-    top: 610px;
+    left: 1201px;
+    top: 549px;
     color: rgb(255, 255, 255);
   }
   .nomejogador4 {
     position: absolute; 
-    left: 1415px;
-    top: 610px;
+    left: 1273px;
+    top: 549px;
     color: rgb(255, 255, 255);
   }
   .nome-categoria {
     position: absolute; 
-    left: 35px;
+    left: 31px;
     top: 0px;
     color: rgb(255, 255, 255);
   }
@@ -320,7 +320,7 @@
   }
   .nome-tema {
     position: absolute; 
-    left: 35px;
+    left: 31px;
     top: 50px;
     color: rgb(255, 255, 255);
   }
@@ -331,219 +331,242 @@
     color: rgb(255, 255, 255);
   }
   .nome-enunciado {
-    font-size: 17px;
-    
-    width: 92vh;
+    font-size: 16px;
+    font-family: "Bahnschrift Condensed";
+    width: 88vh;
     text-indent: 30px;
     position: absolute; 
-    left: 410px;
-    top: 125px;
-    color: rgb(255, 255, 255);
+    left: 370px;
+    top: 162px;
+    color: #D0D8E5;
+  }
+  .questao {
+    font-family: "Calibri";
+    position: absolute; 
+    left: 560px;
+    top: 91px;
+    color: #D0D8E5;
   }
   .nome-opcao1 {
     position: absolute; 
-    left: 575px;
-    top: 302px;
+    left: 517px;
+    top: 271px;
     color: rgb(0, 0, 0);
   }
   .tempo {
     position: absolute; 
-    left: 1309px;
-    top: 4px;
+    left: 1178px;
+    top: 0px;
     color: rgb(24, 24, 24);
   }
   .tempo1234 {
     position: absolute; 
-    left: 309px;
+    left: 278px;
     top: 4px;
     color: rgb(24, 24, 24);
   }
   .img-teste2 {
     position: absolute; 
-    left: 1250px;
-    top: 10px;
+    left: 1125px;
+    top: 9px;
   }
   .responder {
     position: absolute; 
-    left: 675px;
-    top: 638px;
+    left: 607px;
+    top: 574px;
     color: rgb(24, 24, 24);
   }
   .img-avancar {
     position: absolute; 
-    left: 680px;
+    left: 612px;
     top: 1675px;
   }
   .img-teste4 {
     position: absolute; 
-    left: 640px;
-    top: 671px;
+    left: 576px;
+    top: 603px;
   }
   .img-teste {
     position: absolute; 
-    left: 1190px;
-    top: 340px;
+    left: 1071px;
+    top: 306px;
   }
   .img-enunciado {
     
     position: absolute; 
-    left: 350px;
-    top: 70px;
+    left: 340px;
+    top: 87px;
   }
   .img-opcao1 {
     position: absolute; 
-    left: 400px;
-    top: 280px;
+    left: 360px;
+    top: 251px;
   }
   .nome-opcao1 {
     position: absolute; 
-    left: 500px;
-    top: 320px;
+    left: 453px;
+    top: 286px;
     color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: "Bahnschrift Condensed";
+    width: 82vh;
+    
   }
   .img-letra-a {
     position: absolute; 
-    left: 437px;
-    top: 305px;
+    left: 390px;
+    top: 271px;
   }
   .img-opcao2 {
     position: absolute; 
-    left: 400px;
-    top: 367px;
+    left: 360px;
+    top: 327px;
   }
   .nome-opcao2 {
     position: absolute; 
-    left: 500px;
-    top: 407px;
+    left: 453px;
+    top: 362px;
     color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: "Bahnschrift Condensed";
+    width: 82vh;
+    
   }
   .img-letra-b {
     position: absolute; 
-    left: 437px;
-    top: 392px;
+    left: 390px;
+    top: 347px;
   }
   .img-opcao3 {
     position: absolute; 
-    left: 400px;
-    top: 452px;
+    left: 360px;
+    top: 403px;
   }
   .nome-opcao3 {
     position: absolute; 
-    left: 500px;
-    top: 492px;
+    left: 453px;
+    top: 438px;
     color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: "Bahnschrift Condensed";
+    width: 82vh;
+    
   }
   .img-letra-c {
     position: absolute; 
-    left: 437px;
-    top: 477px;
+    left: 390px;
+    top: 423px;
   }
   .img-opcao4 {
     position: absolute; 
-    left: 400px;
-    top: 540px;
+    left: 360px;
+    top: 479px;
   }
   .nome-opcao4 {
     position: absolute; 
-    left: 500px;
-    top: 580px;
+    left: 453px;
+    top: 514px;
     color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: "Bahnschrift Condensed";
+    width: 82vh;
+    
   }
   .img-letra-d {
     position: absolute; 
-    left: 437px;
-    top: 565px;
+    left: 390px;
+    top: 499px;
   }  
   .img-numero1-linha2 {
     position: absolute; 
-    left: 1265px;
-    top: 560px;
+    left: 1138px;
+    top: 504px;
   }
   .img-numero2-linha2 {
     position: absolute; 
-    left: 1265px;
-    top: 520px;
+    left: 1138px;
+    top: 468px;
   }
   .img-numero3-linha2 {
     position: absolute; 
-    left: 1265px;
-    top: 480px;
+    left: 1138px;
+    top: 432px;
   }
   .img-numero4-linha2 {
     position: absolute; 
-    left: 1265px;
-    top: 440px;
+    left: 1138px;
+    top: 396px;
   }
   .img-numero5-linha2 {
     position: absolute; 
-    left: 1265px;
-    top: 400px;
+    left: 1138px;
+    top: 364px;
   }
   .img-numero1-linha3 {
     position: absolute; 
-    left: 1345px;
-    top: 560px;
+    left: 1210px;
+    top: 504px;
   }
   .img-numero2-linha3 {
     position: absolute; 
-    left: 1345px;
-    top: 520px;
+    left: 1210px;
+    top: 468px;
   }
   .img-numero3-linha3 {
     position: absolute; 
-    left: 1345px;
-    top: 480px;
+    left: 1210px;
+    top: 432px;
   }
   .img-numero4-linha3 {
     position: absolute; 
-    left: 1345px;
-    top: 440px;
+    left: 1210px;
+    top: 396px;
   }
   .img-numero5-linha3 {
     position: absolute; 
-    left: 1345px;
-    top: 400px;
+    left: 1210px;
+    top: 364px;
   }
   .img-numero1-linha4 {
     position: absolute; 
-    left: 1425px;
-    top: 560px;
+    left: 1282px;
+    top: 504px;
   }
   .img-numero2-linha4 {
     position: absolute; 
-    left: 1425px;
-    top: 520px;
+    left: 1282px;
+    top: 468px;
   }
   .img-numero3-linha4 {
     position: absolute; 
-    left: 1425px;
-    top: 480px;
+    left: 1282px;
+    top: 432px;
   }
   .img-numero4-linha4 {
     position: absolute; 
-    left: 1425px;
-    top: 440px;
+    left: 1282px;
+    top: 396px;
   }
   .img-numero5-linha4 {
     position: absolute; 
-    left: 1425px;
-    top: 400px;
+    left: 1282px;
+    top: 364px;
   }
   
   .img-botaojogador2 {
     position: absolute; 
-    left: 1265px;
-    top: 640px;
+    left: 1138px;
+    top: 576px;
   }
   .img-botaojogador3 {
     position: absolute; 
-    left: 1345px;
-    top: 640px;
+    left: 1210px;
+    top: 576px;
   }
   .img-botaojogador4 {
     position: absolute; 
-    left: 1425px;
-    top: 640px;
+    left: 1282px;
+    top: 576px;
   }
 
 .label-count {

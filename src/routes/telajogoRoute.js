@@ -4,6 +4,10 @@ const telajogoController=require('../controller/telajogoController')
 
 routes.post('/',telajogoController.proxima)
 
+routes.get('/tela-inicial',telajogoController.abretelainicial)
+
+routes.post('/tela-inicial',telajogoController.telainicial)
+
 routes.get('/cadastrar-jogador',telajogoController.abrecadastrarjogador)
 
 routes.post('/cadastrar-jogador',telajogoController.cadastrarjogador)
