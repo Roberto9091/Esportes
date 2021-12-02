@@ -5,18 +5,19 @@
                 <img src="/admin/assets/fundojogo2.png" width="1366" height="657" alt="Testando" class="img-fundo-imagem">
                 </div>
 
+                
                 <script type="text/javascript">
                 function shuffleArray(arr) {
-        // Loop em todos os elementos
-    for (let i = arr.length - 1; i > 0; i--) {
-            // Escolhendo elemento aleatório
-        const j = Math.floor(Math.random() * (i + 1));
-        // Reposicionando elemento
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    // Retornando array com aleatoriedade
-    return arr;
-}
+                // Loop em todos os elementos
+                for (let i = arr.length - 1; i > 0; i--) {
+                // Escolhendo elemento aleatório
+                const j = Math.floor(Math.random() * (i + 1));
+                // Reposicionando elemento
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+                }
+                // Retornando array com aleatoriedade
+                return arr;
+                }
                     var contador = 0;
                     
                     function opcaoUm(){
@@ -83,44 +84,7 @@
                         console.log('td clicked');
                     }
                         
-                    function Resposta(){
-                        console.log(contador);
-                        if(contador == 1){
-                            if(aleatorio == 0 || aleatorio == 1  || aleatorio == 2  || aleatorio == 16){
-                                document.getElementById("opcao1").src="/admin/assets/imagem-opcao-certa.png";
-                        }
-                        else{
-                            document.getElementById("opcao1").src="/admin/assets/imagem-opcao-errada.png";
-                        }
-                    }    
-
-                        if(contador == 2){
-                            if(aleatorio == 3 || aleatorio == 6  || aleatorio == 9 ){
-                                document.getElementById("opcao2").src="/admin/assets/imagem-opcao-certa.png";
-                        }
-                        else{
-                            document.getElementById("opcao2").src="/admin/assets/imagem-opcao-errada.png";
-                        }
-                    }
-
-                        if(contador == 3){
-                            if(aleatorio == 4 || aleatorio == 5  || aleatorio == 7  || aleatorio == 8 || aleatorio == 10 || aleatorio == 11){
-                                document.getElementById("opcao3").src="/admin/assets/imagem-opcao-certa.png";
-                        }
-                        else{
-                            document.getElementById("opcao3").src="/admin/assets/imagem-opcao-errada.png";
-                        }
-                    }
-
-                        if(contador == 4){
-                            if(aleatorio == 12 || aleatorio == 13  || aleatorio == 14  || aleatorio == 15){
-                                document.getElementById("opcao4").src="/admin/assets/imagem-opcao-certa.png";
-                        }
-                        else{
-                            document.getElementById("opcao4").src="/admin/assets/imagem-opcao-errada.png";
-                        }
-                    }   
-                    }
+                    
                         
                     </script>
    
@@ -138,8 +102,10 @@
         </div>
 
         <div class="questao">
-            <h1 id="questao">Questão 1<h1>
+            <h1 id="questao">Questão <%=contador%><h1>
         </div>
+
+        
 
         <div class="img-opcao1">
             <img src="/admin/assets/imagem-opcao.png" alt="Botao Opcao 1" id="opcao1" onclick="opcaoUm()" class="img-fundo-imagem">
@@ -173,10 +139,6 @@
             <img src="/admin/assets/letra-d.png" alt="Botao Opcao" id="letra-d" class="img-fundo-imagem">
         </div>
 
-        <div class="img-teste">
-            <img src="/admin/assets/teste1234.png" width="295" height="351" alt="Fundo Enunciado" class="img-fundo-imagem">
-        </div>
-
         <div class="img-teste2">
             <img src="/admin/assets/teste123.png"  width="198" height="60" alt="Fundo Enunciado" class="img-fundo-imagem">
         </div>
@@ -185,37 +147,59 @@
             <h1 id="tempo123">00:00</h1>
         </div>
 
-        <div class="img-teste4">
-            <img src="/admin/assets/teste123a.png"  width="144" height="47" onclick="Resposta()" alt="Fundo Enunciado" class="img-fundo-imagem">
-        </div>
+        
+
+        
+        
+        
+
+        
 
         <% Questoes.forEach(function(questoes){ %>
+
+            
+
+            <div class="nome-tema-sql">
+                <td><%=questoes.tema.nometema%></td>
+                </div>
+
             <script>
                 
                 function Resposta(){
                     
-                    var pontuacao = 0;
-                    console.log(contador);
+                    var pontuacao = "<%=pontuacao%>";
                     
-                    certa
+ 
                         if(questoes[contador-1]===certa){
                             document.getElementById("opcao"+contador).src="/admin/assets/imagem-opcao-certa.png";
                             pontuacao++;
+                            document.getElementById("pontuacao").value = pontuacao;
+                            document.getElementById("tempojogoM").value = mm;
+                            document.getElementById("tempojogo").value = ss;
                     }
                         else{
                             document.getElementById("opcao"+contador).src="/admin/assets/imagem-opcao-errada.png";
                             ss = ss + 5;
+                            
+                            document.getElementById("pontuacao").value = pontuacao;
+                            document.getElementById("tempojogoM").value = mm;
+                            document.getElementById("tempojogo").value = ss;
+                            
                         }
-                   
+                        console.log(pontuacao);
+                        
 
                         if(pontuacao == 1){
                             document.getElementById("botaojogador").src="/admin/assets/botaojogador_num1.png";
+                            pontuacao = 1;
                         }
                         if(pontuacao == 2){
                             document.getElementById("botaojogador").src="/admin/assets/botaojogador_num2.png";
+                            pontuacao = 2;
                         }
                         if(pontuacao == 3){
                             document.getElementById("botaojogador").src="/admin/assets/botaojogador_num3.png";
+                            pontuacao = 3;
                         }
                         if(pontuacao == 4){
                             document.getElementById("botaojogador").src="/admin/assets/botaojogador_num4.png";
@@ -223,34 +207,15 @@
                         if(pontuacao == 5){
                             document.getElementById("botaojogador").src="/admin/assets/botaojogador_num5.png";
                         }
+                        
+                        
                     }
-                    var mm = 0;
-                    var ss = 0;
-
-                    var tempo = 1000;
-                    var cron;
-
-                    function tempostart(){
-                        cron = setInterval(() => { start(); }, tempo);
-                    }
-                    function start(){
-                    ss++;
-
-                    if (ss == 59) { 
-                        ss = 0; 
-                        mm++; 
-
-                    if (mm == 59) { 
-                    mm = 0;
-                    }
-                    }
- 
-                    var format = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
-                        document.getElementById('tempo123').innerText = format;
-                        return format;
-                    }
-                    tempostart();
+                    
+                    
                 </script>
+
+                
+                
                 
             <tr>
                 <div class="nome-categoria-sql">
@@ -264,6 +229,7 @@
                 <div class="nome-enunciado">
                 <td><%=questoes.enunciado%></td>
                 </div>
+                
 
                 
                     <script>
@@ -294,108 +260,165 @@
               
                         
             </tr>
+
+            <form class="form-horizontal" method="POST">
+                <input type="hidden" name="idQTema" value="<%=questoes.idQTema%>">
+                <input type="hidden" name="nomejogador" value="<%=nomejogador%>">
+                <input type="hidden" name="contador" value="<%=parseInt(contador)+1%>">
+                <input type="hidden" name="pontuacao" id="pontuacao" value="0">
+                <input type="hidden" name="pontuacaoN" id="pontuacaoN" value="0">
+                <input type="hidden" name="tempojogoM" id="tempojogoM" value="0">
+                <input type="hidden" name="tempojogo" id="tempojogo" value="0">
+                <div class="row clearfix">
+                    <div class="img-teste4">
+                        <button id="clickMe" onclick="Resposta()" type="submit" class="botao-proximofinal"  class="btn btn-primary m-t-15 waves-effect">Próximo</button>
+                    </div>
+                </div>
+            </form> 
         
             <%});%>
 
         <div class="img-numero1-linha1">
-            <img src="/admin/assets/num1a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+            <img id="num1" src="/admin/assets/num1a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
         </div>
         <div class="img-numero2-linha1">
-            <img src="/admin/assets/num2a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+            <img id="num2" src="/admin/assets/num2a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
         </div>
         <div class="img-numero3-linha1">
-            <img src="/admin/assets/num3a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+            <img id="num3" src="/admin/assets/num3a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
         </div>
         <div class="img-numero4-linha1">
-            <img src="/admin/assets/num4a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+            <img id="num4" src="/admin/assets/num4a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
         </div>
         <div class="img-numero5-linha1">
-            <img src="/admin/assets/num5a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+            <img id="num5" src="/admin/assets/num5a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
         </div>
 
         <div class="nomejogador1">
-            <label class="TextoNomeJog1">Jogador 1</label>
+            <label class="TextoNomeJog1"><%=nomejogador%></label>
         </div>
          
         <div class="img-botaojogador1">
             <img id="botaojogador" src="/admin/assets/botaojogador.png" alt="Testando" class="img-jogador4">
         </div>
 
+        <div class="fundo-jogo">
+            <img src="/admin/assets/testefinal2.png" id="telafinal" alt="Testando" class="img-fundo-imagem">
+        </div>
+
+
+        <div class="nomejogador1-final">
+            <h1 id="final1" class="TextoNomeJog1">   </h1>
+        </div>
+
+        <div class="pontuacao-final">
+            <label id="final2" class="TextoNomeJog1"></label>
+        </div>
+
+        <div class="tempojogo-final">
+            <label id="final3" class="TextoNomeJog1"></label>
+        </div>
+
+        <div class="vai-jogarnovamente">
+                <a id="final4a" >
+                <img left="1000px" id="final4" type="submit" src="/admin/assets/botao-jogarnovamente2.png">
+                </a>
+        </div>
+
+        <script>
+            
+
+            var contador2;
+            
+            
+            if("<%=contador%>" == 2){
+                document.getElementById("botaojogador").src="/admin/assets/botaojogador_num1.png";
+            }
+            if("<%=contador%>" == 3){
+                document.getElementById("botaojogador").src="/admin/assets/botaojogador_num2.png";
+                
+            }
+            if("<%=contador%>" == 4){
+                document.getElementById("botaojogador").src="/admin/assets/botaojogador_num3.png";
+            }
+            if("<%=contador%>" == 5){
+                document.getElementById("botaojogador").src="/admin/assets/botaojogador_num4.png";
+            }
+            if("<%=contador%>" == 6){
+                document.getElementById("final1").innerText = "<%=nomejogador%>";
+                document.getElementById("final2").innerText = "<%=pontuacao%> de 5";
+                document.getElementById("final3").innerText = "<%=tempojogoM%> : <%=tempojogo%>";
+                document.getElementById("final4a").href="/admin/telajogo/cadastrar-jogador";
+                document.getElementById("final4").src="/admin/assets/botao-jogarnovamente.png";
+                var telaf = document.getElementById("final4").left=+"500";
+                
+                var telaf = document.getElementById("telafinal").src="/admin/assets/testefinal.png";
+                telaf.style.height = 657;
+                telaf.style.width = 1366;
+            }
+            
+
+                    var mm = "<%=tempojogoM%>";
+                    var ss = "<%=tempojogo%>";
+
+                    var tempo = 1000;
+                    var cron;
+
+                    function tempostart(){
+                        cron = setInterval(() => { start(); }, tempo);
+                    }
+                    function start(){
+                    ss++;
+
+                    if (ss == 59) { 
+                        ss = 0; 
+                        mm++; 
+
+                    if (mm == 59) { 
+                    mm = 0;
+                    }
+                    }
+                    if(mm == 2){
+                document.getElementById("final1").innerText = "<%=nomejogador%>";
+                document.getElementById("final2").innerText = "0 de 5";
+                document.getElementById("final3").innerText = "Seu tempo acabou!";
+                document.getElementById("final4a").href="/admin/telajogo/cadastrar-jogador";
+                document.getElementById("final4").src="/admin/assets/botao-jogarnovamente.png";
+                var telaf = document.getElementById("final4").left=+"500";
+                
+                var telaf = document.getElementById("telafinal").src="/admin/assets/testefinal.png";
+                telaf.style.height = 657;
+                telaf.style.width = 1366;
+            }
+
+                    
+                    var format = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+                    if(ss <= 100){
+                        
+                        document.getElementById('tempo123').innerText = format;
+                    }
+                    else{
+                        document.getElementById('tempo123').innerText = "Seu Tempo Acabou";
+                    }
+                    
+                        return format;
+                    }
+                    
+                    tempostart();
+                    console.log(contador2)
+
+                    
+                    
+                    
+                
+                    
+        
+        </script>
+        
+
     </div>
     
-    <div class="img-numero1-linha2">
-        <img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero2-linha2">
-        <img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero3-linha2">
-        <img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero4-linha2">
-        <img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero5-linha2">
-        <img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-
-    <div class="nomejogador2">
-        <label class="TextoNomeJog2">Jogador 2</label>
-    </div>
-
-    <div class="img-botaojogador2">
-        <img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador2">
-    </div>
-
-    
-    <div class="img-numero1-linha3">
-        <img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero2-linha3">
-        <img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero3-linha3">
-        <img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero4-linha3">
-        <img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero5-linha3">
-        <img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-
-    <div class="nomejogador3">
-        <label class="TextoNomeJog3" color="white">Jogador 3</label>
-    </div>
-
-    <div class="img-botaojogador3">
-        <img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador3">
-    </div>
-    
-    <div class="img-numero1-linha4">
-        <img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero2-linha4">
-        <img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero3-linha4">
-        <img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero4-linha4">
-        <img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-    <div class="img-numero5-linha4">
-        <img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
-    </div>
-
-    <div class="nomejogador4">
-        <label class="TextoNomeJog4">Jogador 4</label>
-    </div>
-
-    <div class="img-botaojogador4">
-        <img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador4">
-    </div>
-
+   
 
     </form>
 

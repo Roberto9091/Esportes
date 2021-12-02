@@ -34,6 +34,83 @@ else
             </div>
         </form> 
 
+<div class="img-teste">
+            <img src="/admin/assets/teste1234.png" width="295" height="351" alt="Fundo Enunciado" class="img-fundo-imagem">
+        </div>
+
+
+<div class="img-numero1-linha2">
+<img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero2-linha2">
+<img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero3-linha2">
+<img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero4-linha2">
+<img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero5-linha2">
+<img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+
+<div class="nomejogador2">
+<label class="TextoNomeJog2">Jogador 2</label>
+</div>
+
+<div class="img-botaojogador2">
+<img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador2">
+</div>
+
+
+<div class="img-numero1-linha3">
+<img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero2-linha3">
+<img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero3-linha3">
+<img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero4-linha3">
+<img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero5-linha3">
+<img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+
+<div class="nomejogador3">
+<label class="TextoNomeJog3" color="white">Jogador 3</label>
+</div>
+
+<div class="img-botaojogador3">
+<img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador3">
+</div>
+
+<div class="img-numero1-linha4">
+<img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero2-linha4">
+<img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero3-linha4">
+<img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero4-linha4">
+<img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+<div class="img-numero5-linha4">
+<img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+</div>
+
+<div class="nomejogador4">
+<label class="TextoNomeJog4">Jogador 4</label>
+</div>
+
+<div class="img-botaojogador4">
+<img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador4">
+</div>
 
 
 

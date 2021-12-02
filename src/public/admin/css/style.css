@@ -119,12 +119,12 @@
 }
 .titulo-fundo {
   position: absolute;
-  left: 145px;
+  left: 130px;
   top: -75px;
 }
 .label-titulo {
   font-family: 'Bubblegum Sans', Summit;
-  width:330px;
+  width:297px;
   display: inline-block;
   color: rgb(255, 255, 255);
   
@@ -176,24 +176,56 @@
   }
   .botao-proximo{
     position: absolute; 
-    left: 150px;
-    top: 470px;
+    left: 261px;
+    top: 423px;
   }
+  .botao-proximo2{
+    margin: 0 auto;
+    padding: 0;
+    width:100px;
+    height:35px;
+    color: #E0E0E0;
+    background: transparent url('../assets/cadastrar-voltar') no-repeat left bottom;
+
+    }
   .botao-voltar{
     position: absolute; 
-    left: 290px;
-    top: 470px;
+    left: 105px;
+    top: 423px;
+  }
+  .botao-voltar2{
+    margin: 0 auto;
+    padding: 0;
+    width:100px;
+    height:35px;
+    color: #E0E0E0;
+    background: transparent url('../assets/cadastrar-voltar') no-repeat left bottom;
+
+    }
+    .botao-proximofinal{
+      margin: 0 auto;
+      padding: 0;
+      width:150px;
+      height:40px;
+      color: #E0E0E0;
+      background: transparent url('../assets/cadastrar-voltar') no-repeat left bottom;
+  
+      }
+  .botao-voltarCm{
+    position: absolute; 
+    left: 1060px;
+    top: 590px;
   }
   .digite-nome{
     position: absolute; 
-    left: 157px;
-    top: 67px;
-    width: 130%;
+    left: 135px;
+    top: 90px;
+    width: 142%;
   }
   .select-categoria{
     position: absolute; 
-    left: 145px;
-    top: 205px;
+    left: 122px;
+    top: 268px;
     width: 50%;
   }
   .select-tema{
@@ -205,8 +237,8 @@
   
   .select-numero{
     position: absolute; 
-    left: 145px;
-    top: 347px;
+    left: 122px;
+    top: 317px;
     width: 50%;
   }
   .select-nivel{
@@ -239,6 +271,16 @@
     position: absolute; 
     left: 530px;
     top: 50px;
+  }
+  .teste {
+    position: absolute; 
+    left: 530px;
+    top: 50px;
+  }
+  .icone-som {
+    position: absolute; 
+    left: 910px;
+    top: 575px;
   }
   .nome-teste {
     position: absolute; 
@@ -284,10 +326,35 @@
   }
   .nomejogador1 {
     position: absolute; 
+    font-family: 'Calibri', Summit;
     left: 119px;
     top: 504px;
     color: rgb(255, 255, 255);
     }
+    .nomejogador1-final {
+      position: absolute; 
+      font-size:xx-large;
+      font-family: 'Calibri', Summit;
+      left: 679px;
+      top: 118px;
+      color: rgb(255, 255, 255);
+      }
+      .pontuacao-final {
+        position: absolute; 
+        font-size:xx-large;
+        font-family: 'Calibri', Summit;
+        left: 595px;
+        top: 263px;
+        color: rgb(255, 255, 255);
+        }
+        .tempojogo-final{
+          position: absolute; 
+          font-size:xx-large;
+          font-family: 'Calibri', Summit;
+          left: 612px;
+          top: 388px;
+          color: rgb(255, 255, 255);
+          }
   .nomejogador2 {
     position: absolute; 
     left: 1129px;
@@ -383,8 +450,8 @@
   }
   .img-teste4 {
     position: absolute; 
-    left: 576px;
-    top: 603px;
+    left: 570px;
+    top: 598px;
   }
   .img-teste {
     position: absolute; 
@@ -449,7 +516,7 @@
     color: rgb(0, 0, 0);
     font-size: 16px;
     font-family: "Bahnschrift Condensed";
-    width: 82vh;
+    width: 74vh;
     
   }
   .img-letra-c {
@@ -569,6 +636,108 @@
     top: 576px;
   }
 
+  .vai-jogar {
+    position: absolute; 
+    left: 566px;
+    top: 392px;
+    transition: all .2s ease-in-out;
+  }
+  .vai-jogarnovamente {
+    position: absolute; 
+    left: 500px;
+    top: 527px;
+    transition: all .2s ease-in-out;
+  }
+  .vai-jogar2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #15365F;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+
+  .vai-jogar:hover .vai-jogar2 {
+    visibility: visible;
+    opacity: 1;
+  }
+  .telacadastro {
+    position: absolute; 
+    left: 405px;
+    top: 555px;
+    transition: all .2s ease-in-out;
+  }
+  .telacadastro2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #15365F;
+    color: #fff;
+    visibility: hidden;
+    opacity: 1;
+  
+    /* transition effect. not necessary */
+    transition: opacity .1s, visibility .1s;
+  }
+
+  .telacomojogar {
+    position: absolute; 
+    left: 472px;
+    top: 500px;
+    transition: all .2s ease-in-out;
+  }
+  .telacomojogar2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #15365F;
+    color: #fff;
+    visibility: hidden;
+    opacity: 1;
+  
+    /* transition effect. not necessary */
+    transition: opacity .1s, visibility .1s;
+  }
+  .vai-jogar:hover .vai-jogar2 {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .telacadastro:hover .telacadastro2 {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .telacomojogar:hover .telacomojogar2 {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .proximo1 {
+    position: absolute; 
+    left: 680px;
+    top: 580px;
+  }
+  .anterior1 {
+    position: absolute; 
+    left: 460px;
+    top: 581px;
+  }
+  .fundo-cmjogar {
+    position: absolute; 
+    left: 108px;
+    top: 35px;
+  }
 .label-count {
   position: absolute;
   top: 2px;

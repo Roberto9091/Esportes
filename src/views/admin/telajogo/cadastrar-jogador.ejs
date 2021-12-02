@@ -4,17 +4,23 @@
         <div class="row clearfix">
             <form class="form-horizontal" method="POST">
                 <div class="fundo-jogo">
-                    <img src="/admin/assets/fundojogo2.png" width="1518" height="730" alt="Testando" class="img-fundo-imagem">
+                    <img src="/admin/assets/fundojogo2.png" width="1366" height="657" alt="Testando" class="img-fundo-imagem">
                         <div class="fundo-jogo-2">
-                            <img src="/admin/assets/fundo-jogo-2.png" width="515" height="587" alt="Testando" class="img-fundo-imagem">
+                            <img src="/admin/assets/fundo-jogo-2-final.png" width="463" height="528" alt="Testando" class="img-fundo-imagem">
                         <div class="titulo-fundo">
                             <h1 class="label-titulo">SPEED-TEST</h1>
                         </div>
+                        
                             
-
+                        <form class="form-horizontal" method="POST">  
                             <div class="digite-nome">
                                 <input type="text" name="nomejogador" id="nomejogador" class="form-control123"
                                 placeholder="Digite seu nome:" >
+                                <input type="hidden" name="contador"  id="contador" value="1">
+                                <input type="hidden" name="pontuacao"  id="pontuacao" value="0">
+                                <input type="hidden" name="pontuacaoN"  id="pontuacaoN" value="0">
+                                <input type="hidden" name="tempojogo"  id="tempojogo" value="0">
+                                <input type="hidden" name="tempojogoM"  id="tempojogoM" value="0">
                             </div>
 
                             
@@ -51,33 +57,25 @@
 
                             
     
-                            <div class="select-numero">
-                
-                                <select name="" id="">
-                                    
-                                    <option value="">Nível 1</option>
-                                    <option value="">Nível 2</option>
-                                    <option value="">Nível 3</option>
-                
-                                </select>
                             
-                            </div>
 
-                        <form class="form-horizontal" method="POST">   
+                         
                             <div class="row clearfix">
                                 <div class="botao-proximo">
-                                    <button type="submit" class="btn btn-primary m-t-15 waves-effect">Próximo</button>
+                                    <button type="submit" class="botao-proximo2" src="/admin/assets/cadastrar-proximo.png">Próximo</button>
                                 </div>
                             </div>
                         </form> 
                         
-                            <% Categorias.forEach(function(categorias){ %>
+                            
                                 <div class="row clearfix">
                                     <div class="botao-voltar">
-                                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Voltar</button>
+                                        <a href="/admin/telajogo/tela-inicial">
+                                        <button type="submit" class="botao-voltar2" src="/admin/assets/cadastrar-voltar.png">Voltar</button>
+                                        </a>
                                     </div>
                                 </div>
-                            <%});%>
+                            
                         </div>
                     </form>
                 </div>
@@ -114,6 +112,7 @@
         </div>
         <!-- #END# Horizontal Layout -->
     </div>
+    
 </section>
     <script src="https://cdn.jsdelivr.net/npm/boodstrap@5.0.2/dist/js/boodstrap.bundle.min.js"></script>
 <%- include('../rodape') -%>

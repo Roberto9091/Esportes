@@ -1,0 +1,414 @@
+<%- include('../cabecalho2') -%>
+    <div class="container">
+        <form class="form-horizontal" method="POST">
+            <div class="imagem-fundo-tabuleiro">
+                <img src="/admin/assets/fundojogo2.png" width="1366" height="657" alt="Testando" class="img-fundo-imagem">
+                </div>
+                <script type="text/javascript">
+                    var contador;
+                    contador++;
+                    console.log(contador);
+                    </script>
+                <script type="text/javascript">
+                function shuffleArray(arr) {
+        // Loop em todos os elementos
+    for (let i = arr.length - 1; i > 0; i--) {
+            // Escolhendo elemento aleatório
+        const j = Math.floor(Math.random() * (i + 1));
+        // Reposicionando elemento
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    // Retornando array com aleatoriedade
+    return arr;
+}
+                    var contador = 0;
+                    
+                    function opcaoUm(){
+                        document.getElementById("opcao1").src="/admin/assets/testea123.png";
+                        document.getElementById("opcao2").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao3").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao4").src="/admin/assets/imagem-opcao.png";
+                        
+                        document.getElementById("letra-a").src="/admin/assets/letra-a-selecionada.png";
+
+                        document.getElementById("letra-b").src="/admin/assets/letra-b.png";
+                        document.getElementById("letra-c").src="/admin/assets/letra-c.png";
+                        document.getElementById("letra-d").src="/admin/assets/letra-d.png";
+                        
+                        contador = 1;
+                    }
+                    function opcaoDois(){
+                        document.getElementById("opcao1").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao2").src="/admin/assets/testea123.png";
+                        document.getElementById("opcao3").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao4").src="/admin/assets/imagem-opcao.png";
+
+                        document.getElementById("letra-b").src="/admin/assets/letra-b-selecionada.png";
+
+                        document.getElementById("letra-a").src="/admin/assets/letra-a.png";
+                        document.getElementById("letra-c").src="/admin/assets/letra-c.png";
+                        document.getElementById("letra-d").src="/admin/assets/letra-d.png";
+
+                        contador = 2;
+                    }
+                    function opcaoTres(){
+                        document.getElementById("opcao1").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao2").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao3").src="/admin/assets/testea123.png";
+                        document.getElementById("opcao4").src="/admin/assets/imagem-opcao.png";
+
+                        document.getElementById("letra-c").src="/admin/assets/letra-c-selecionada.png";
+
+                        document.getElementById("letra-b").src="/admin/assets/letra-b.png";
+                        document.getElementById("letra-a").src="/admin/assets/letra-a.png";
+                        document.getElementById("letra-d").src="/admin/assets/letra-d.png";
+
+                        contador = 3;
+                    }
+                    function opcaoQuatro(){
+                        document.getElementById("opcao1").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao2").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao3").src="/admin/assets/imagem-opcao.png";
+                        document.getElementById("opcao4").src="/admin/assets/testea123.png";
+
+                        document.getElementById("letra-d").src="/admin/assets/letra-d-selecionada.png";
+
+                        document.getElementById("letra-b").src="/admin/assets/letra-b.png";
+                        document.getElementById("letra-c").src="/admin/assets/letra-c.png";
+                        document.getElementById("letra-a").src="/admin/assets/letra-a.png";
+
+                        contador = 4;
+                    }
+                    
+                    function Testando(){
+                        console.log('tr clicked');
+                    }
+                    function Testand(){
+                        console.log('td clicked');
+                    }
+                        
+                    function Resposta(){
+                        console.log(contador);
+                        if(contador == 1){
+                            if(aleatorio == 0 || aleatorio == 1  || aleatorio == 2  || aleatorio == 16){
+                                document.getElementById("opcao1").src="/admin/assets/imagem-opcao-certa.png";
+                        }
+                        else{
+                            document.getElementById("opcao1").src="/admin/assets/imagem-opcao-errada.png";
+                        }
+                    }    
+
+                        if(contador == 2){
+                            if(aleatorio == 3 || aleatorio == 6  || aleatorio == 9 ){
+                                document.getElementById("opcao2").src="/admin/assets/imagem-opcao-certa.png";
+                        }
+                        else{
+                            document.getElementById("opcao2").src="/admin/assets/imagem-opcao-errada.png";
+                        }
+                    }
+
+                        if(contador == 3){
+                            if(aleatorio == 4 || aleatorio == 5  || aleatorio == 7  || aleatorio == 8 || aleatorio == 10 || aleatorio == 11){
+                                document.getElementById("opcao3").src="/admin/assets/imagem-opcao-certa.png";
+                        }
+                        else{
+                            document.getElementById("opcao3").src="/admin/assets/imagem-opcao-errada.png";
+                        }
+                    }
+
+                        if(contador == 4){
+                            if(aleatorio == 12 || aleatorio == 13  || aleatorio == 14  || aleatorio == 15){
+                                document.getElementById("opcao4").src="/admin/assets/imagem-opcao-certa.png";
+                        }
+                        else{
+                            document.getElementById("opcao4").src="/admin/assets/imagem-opcao-errada.png";
+                        }
+                    }   
+                    }
+                        
+                    </script>
+   
+
+        <div class="nome-categoria">
+            <h3 class="TextoNomeJog1">Categoria:</h3>
+        </div>
+        
+        <div class="nome-tema">
+            <h3 class="TextoNomeJog1">Tema:</h3>
+        </div>
+        
+        <div class="img-enunciado">
+            <img src="/admin/assets/imagem-enunciado2.png" alt="Fundo Enunciado" class="img-fundo-imagem">
+        </div>
+
+        <div class="questao">
+            <h1 id="questao">Questão 1<h1>
+        </div>
+
+        <div class="img-opcao1">
+            <img src="/admin/assets/imagem-opcao.png" alt="Botao Opcao 1" id="opcao1" onclick="opcaoUm()" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-letra-a">
+            <img src="/admin/assets/letra-a.png" alt="Botao Opcao" id="letra-a" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-opcao2">
+            <img src="/admin/assets/imagem-opcao.png" alt="Botao Opcao" id="opcao2" onclick="opcaoDois()" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-letra-b">
+            <img src="/admin/assets/letra-b.png" alt="Botao Opcao" id="letra-b" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-opcao3">
+            <img src="/admin/assets/imagem-opcao.png" alt="Botao Opcao" id="opcao3" onclick="opcaoTres()" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-letra-c">
+            <img src="/admin/assets/letra-c.png" alt="Botao Opcao" id="letra-c" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-opcao4">
+            <img src="/admin/assets/imagem-opcao.png" alt="Botao Opcao" id="opcao4" onclick="opcaoQuatro()" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-letra-d">
+            <img src="/admin/assets/letra-d.png" alt="Botao Opcao" id="letra-d" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-teste">
+            <img src="/admin/assets/teste1234.png" width="295" height="351" alt="Fundo Enunciado" class="img-fundo-imagem">
+        </div>
+
+        <div class="img-teste2">
+            <img src="/admin/assets/teste123.png"  width="198" height="60" alt="Fundo Enunciado" class="img-fundo-imagem">
+        </div>
+
+        <div class="tempo">
+            <h1 id="tempo123">00:00</h1>
+        </div>
+
+        <div class="img-teste4">
+            <img src="/admin/assets/teste123a.png"  width="144" height="47" onclick="Resposta()" alt="Fundo Enunciado" class="img-fundo-imagem">
+        </div>
+
+        <form class="form-horizontal" method="POST">   
+            <div class="row clearfix">
+                <div class="img-teste4">
+                    <button type="submit" class="btn btn-primary m-t-15 waves-effect">Próximo</button>
+                </div>
+            </div>
+        </form> 
+
+        <% Questoes.forEach(function(questoes){ %>
+            <script>
+                
+                function Resposta(){
+                    
+                    var pontuacao = 0;
+                    console.log(contador);
+                    
+                    certa
+                        if(questoes[contador-1]===certa){
+                            document.getElementById("opcao"+contador).src="/admin/assets/imagem-opcao-certa.png";
+                            pontuacao++;
+                    }
+                        else{
+                            document.getElementById("opcao"+contador).src="/admin/assets/imagem-opcao-errada.png";
+                            ss = ss + 5;
+                        }
+                   
+
+                        if(pontuacao == 1){
+                            document.getElementById("botaojogador").src="/admin/assets/botaojogador_num1.png";
+                        }
+                        if(pontuacao == 2){
+                            document.getElementById("botaojogador").src="/admin/assets/botaojogador_num2.png";
+                        }
+                        if(pontuacao == 3){
+                            document.getElementById("botaojogador").src="/admin/assets/botaojogador_num3.png";
+                        }
+                        if(pontuacao == 4){
+                            document.getElementById("botaojogador").src="/admin/assets/botaojogador_num4.png";
+                        }
+                        if(pontuacao == 5){
+                            document.getElementById("botaojogador").src="/admin/assets/botaojogador_num5.png";
+                        }
+                    }
+                    var mm = 0;
+                    var ss = 0;
+
+                    var tempo = 1000;
+                    var cron;
+
+                    function tempostart(){
+                        cron = setInterval(() => { start(); }, tempo);
+                    }
+                    function start(){
+                    ss++;
+
+                    if (ss == 59) { 
+                        ss = 0; 
+                        mm++; 
+
+                    if (mm == 59) { 
+                    mm = 0;
+                    }
+                    }
+ 
+                    var format = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+                        document.getElementById('tempo123').innerText = format;
+                        return format;
+                    }
+                    tempostart();
+                </script>
+                
+            <tr>
+                <div class="nome-categoria-sql">
+                <td><%=questoes.tema.categoria.nomecategoria%></td>
+                </div>
+
+                <div class="nome-tema-sql">
+                <td><%=questoes.tema.nometema%></td>
+                </div>     
+                
+                <div class="nome-enunciado">
+                <td><%=questoes.enunciado%></td>
+                </div>
+
+                
+                    <script>
+                    
+                    var aleatorio = Math.floor(Math.random() * 15);
+                    var questoes = ["<%=questoes.opcao1%>","<%=questoes.opcao2%>", "<%=questoes.opcao3%>", "<%=questoes.opcao4%>"];
+                    var certa = "<%=questoes.opcao1%>"
+                    shuffleArray(questoes);
+                   
+                    </script>
+                     
+                        
+                        <div class="nome-opcao1">
+                        <td><script>document.write(questoes[0]) </script></td>
+                        </div>
+
+                        <div class="nome-opcao2">
+                        <td><script>document.write(questoes[1]) </script></td>
+                        </div>
+
+                        <div class="nome-opcao3">
+                        <td><script>document.write(questoes[2]) </script></td>
+                        </div>
+
+                        <div class="nome-opcao4">
+                        <td><script>document.write(questoes[3]) </script></td>
+                        </div>
+              
+                        
+            </tr>
+        
+            <%});%>
+
+        <div class="img-numero1-linha1">
+            <img src="/admin/assets/num1a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+        </div>
+        <div class="img-numero2-linha1">
+            <img src="/admin/assets/num2a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+        </div>
+        <div class="img-numero3-linha1">
+            <img src="/admin/assets/num3a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+        </div>
+        <div class="img-numero4-linha1">
+            <img src="/admin/assets/num4a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+        </div>
+        <div class="img-numero5-linha1">
+            <img src="/admin/assets/num5a.png" width="72" height="72" alt="Testando" class="img-fundo-imagem">
+        </div>
+
+        <div class="nomejogador1">
+            <label class="TextoNomeJog1">Jogador 1</label>
+        </div>
+         
+        <div class="img-botaojogador1">
+            <img id="botaojogador" src="/admin/assets/botaojogador.png" alt="Testando" class="img-jogador4">
+        </div>
+
+    </div>
+    
+    <div class="img-numero1-linha2">
+        <img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero2-linha2">
+        <img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero3-linha2">
+        <img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero4-linha2">
+        <img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero5-linha2">
+        <img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+
+    <div class="nomejogador2">
+        <label class="TextoNomeJog2">Jogador 2</label>
+    </div>
+
+    <div class="img-botaojogador2">
+        <img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador2">
+    </div>
+
+    
+    <div class="img-numero1-linha3">
+        <img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero2-linha3">
+        <img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero3-linha3">
+        <img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero4-linha3">
+        <img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero5-linha3">
+        <img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+
+    <div class="nomejogador3">
+        <label class="TextoNomeJog3" color="white">Jogador 3</label>
+    </div>
+
+    <div class="img-botaojogador3">
+        <img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador3">
+    </div>
+    
+    <div class="img-numero1-linha4">
+        <img src="/admin/assets/num1a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero2-linha4">
+        <img src="/admin/assets/num2a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero3-linha4">
+        <img src="/admin/assets/num3a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero4-linha4">
+        <img src="/admin/assets/num4a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+    <div class="img-numero5-linha4">
+        <img src="/admin/assets/num5a.png" width="40" height="40" alt="Testando" class="img-fundo-imagem">
+    </div>
+
+    <div class="nomejogador4">
+        <label class="TextoNomeJog4">Jogador 4</label>
+    </div>
+
+    <div class="img-botaojogador4">
+        <img src="/admin/assets/botaojogador_outros.png" width="40" height="40" alt="Testando" class="img-jogador4">
+    </div>
+
+
+    </form>
+
+<%- include('../rodape') -%>

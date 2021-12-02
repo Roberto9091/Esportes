@@ -1,0 +1,107 @@
+<%- include('../cabecalho2') -%>
+<section class="content">
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <form class="form-horizontal" method="POST">
+                <div class="fundo-jogo">
+                    <img src="/admin/assets/fundoCm.png" width="1366" height="657"  alt="Testando" class="img-fundo-imagem">
+                </div>
+            </form>
+            <div class="fundo-cmjogar">
+                <img src="/admin/assets/como jogar.png" id="proximo" width="1151" height="530"  alt="Testando" class="img-fundo-imagem">
+            </div>
+            
+            
+                <script type="text/javascript">
+                    var contador = 1;
+                    
+                    function Proximo1(){
+                        contador++;
+                        if(contador== 1){
+                            document.getElementById("nada").src="/admin/assets/botao-anterior.png";
+                            document.getElementById("proximo").src="/admin/assets/como jogar.png";
+                            document.getElementById("proximo2").src="/admin/assets/botao-proximo.png";
+                    }
+                        if(contador== 2){
+                            document.getElementById("anterior").src="/admin/assets/botao-anterior.png";
+                            document.getElementById("proximo").src="/admin/assets/como jogar - opcao certa.png";
+                            document.getElementById("proximo2").src="/admin/assets/botao-proximo.png";
+                    }
+                        if(contador== 3){
+                            document.getElementById("anterior").src="/admin/assets/botao-anterior.png";
+                            document.getElementById("proximo").src="/admin/assets/como jogar - opcao errada.png";
+                            document.getElementById("proximo2").src="/admin/assets/nada.png";
+                    }
+                       
+                    }
+
+                    function Anterior1(){
+                        contador--;
+                        if(contador== 1){
+                            document.getElementById("proximo").src="/admin/assets/como jogar.png";
+                            document.getElementById("anterior").src="/admin/assets/nada.png";
+                            document.getElementById("proximo2").src="/admin/assets/botao-proximo.png";
+                    }
+                        if(contador== 2){
+                            document.getElementById("anterior").src="/admin/assets/botao-anterior.png";
+                            document.getElementById("proximo").src="/admin/assets/como jogar - opcao certa.png";
+                            document.getElementById("proximo2").src="/admin/assets/botao-proximo.png";
+                    }
+                        if(contador== 3){
+                            document.getElementById("anterior").src="/admin/assets/botao-anterior.png";
+                            document.getElementById("proximo").src="/admin/assets/como jogar - opcao errada.png";  
+                            document.getElementById("proximo2").src="/admin/assets/nada.png";                  }
+                        
+                    }
+                    
+                </script>
+                <div class="anterior1">
+                    <img src="/admin/assets/botao-anterior.png" id="anterior" onclick="Anterior1()">
+                </div>
+
+                <div class="proximo1">
+                    <img src="/admin/assets/botao-proximo.png" id="proximo2" onclick="Proximo1()">
+                </div>
+
+                <div class="botao-voltarCm">
+                    <a  href="/admin/telajogo/tela-inicial">
+                    <img src="/admin/assets/botaovoltarcm.png" alt="Testando" class="img-fundo-imagem">
+                </a>
+                </div>
+                <form class="form-horizontal" method="POST"> 
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div>
+                    <div>
+                        <table class="table table-hover">
+                            <tbody>
+                                <%
+                                function numberToReal(numero) {
+                                    var numero = numero.toFixed(2).split('.');
+                                    numero[0] = "R$ " + numero[0].split(/(?=(?:...)*$)/).join('.');
+                                    return numero.join(',');
+                                }
+                                %>
+                                
+                            </tbody>
+                        </table>
+                        
+
+                        <form class="form-horizontal" method="POST">
+                            <% if(typeof msg !== "undefined"){ %>
+                            <div class="alert bg-green alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <%=msg%>
+                            </div>
+                            <% } %>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #END# Horizontal Layout -->
+    </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/boodstrap@5.0.2/dist/js/boodstrap.bundle.min.js"></script>
+<%- include('../rodape') -%>
